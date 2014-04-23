@@ -1,0 +1,175 @@
+/* Google Web Fonts */
+@font-face {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/PressStart2Play.eot');
+  src: url('fonts/PressStart2Play.eot?iefix') format('eot'),
+       url('fonts/PressStart2Play.woff') format('woff'),
+       url('fonts/PressStart2Play.ttf') format('truetype');
+}
+
+/* ---------------- */
+
+body {
+	background-color: #000;
+	color: white;
+	font-family: 'Press Start 2P', cursive;
+}
+
+* { box-shadow: none !important; }
+
+.content, h1, h2, h3, p, div { 
+	font-family: 'Press Start 2P', cursive; 
+	font-weight: normal;
+	}
+.content[id*=-content]:not(#game-content) {	display: none;}
+.button {	background: rgba(0,0,0,0.4); cursor: pointer;}
+.button:hover {	background: rgba(255,255,255,0.2); }
+.button#back {
+	position: relative;
+	top: -25px;
+	display: inline-block;
+	padding: 5px;
+}
+.button#score-submit {
+	padding: 5px;
+	vertical-align: center;
+}
+
+#highscore-list {
+}
+#score { float: right; }
+
+#myCanvas { border: none; display: block; background: rgb(0,0,0); width: 750px;  height: 600px;}
+#canvas-container { position: relative; width: 450px;}
+#canvas-overlay-container {
+	position: absolute;
+	background: rgba(0,0,0,0.7);
+	height: 100%; 
+	width: 750px;
+	
+}
+#canvas-overlay-content { 
+	position: absolute; 
+	top: 33%; 	
+	left: 0; 
+	
+	max-width: 100%; 
+	text-align: center;
+	width: 750px;
+	max-width: 100%;
+	}
+#canvas-overlay-content #title {
+	text-transform: uppercase;
+	font-size: 150%;
+}
+
+.canvas { margin-left:-10px; position:absolute; padding-top: 20px;}
+.main {width: 450px; margin-left:10px; position: static; }
+.content { width: 850px; text-align: left; }
+#instructions-content { width: 550px; height: 600px;text-align: left; margin-left: 30px;margin-top: 30px;}
+.container {text-align: center; margin:0; padding: 0;}
+.game wrapper { width:940px;
+padding:0;
+
+border-left: 3px solid #6CE26C;
+	border-right: 3px solid #6CE26C;}
+.game  { max-width: 540px; margin: auto; }
+
+.about { font-size: 10px; margin-top: 20px; text-align: center; display: none;}
+
+
+body, html { font-size: 15px; }
+
+div.audio {}
+audio {display: block; }
+
+.score { width: 180px; }
+.score, .lives  { display: inline-block; }
+.lives {
+
+}
+/* ---------- Controls ------------------------*/
+
+.controls { text-align: center; margin-top: 15px;}
+
+/* Arrow Keys - only displayed when game isn't paused */
+#game-buttons { display: none;}
+
+/* Game Menu - displayed when game is paused */
+#menu-buttons ul, .controls#menu-buttons ul li{ list-style: none; padding: 0;}
+#menu-buttons ul li { 
+	height: 40px;
+	line-height: 40px;
+	font-size: 120%;
+	color:#ffffff;
+	}
+
+.controlSound { 
+	background: url('img/audio-icon.png');
+	width: 53px;
+	height: 50px;
+	position: relative;
+	bottom: 5px;
+	background-size: 50px;
+	background-position:right;
+	height: 25px;
+	width: 36px;
+	float: right;
+	}
+	
+#mute { 
+	display: none; 
+	width: 36px; 
+	height: 25px;
+	}
+
+.controlButton {
+	display: inline-block;
+	width: 90px;
+	height: 90px;
+	margin: 5px;
+	background: #c80a0a;
+	line-height: 70px;
+	border-radius: 50%;
+	font-weight: bold;
+	font-size: 60px;
+	cursor:pointer;
+}
+
+.description { display: none; }
+
+@media screen and (max-width: 1050px) {
+	html, body { background: rgb(0,0,0);}
+}
+@media screen and (max-width: 650px) {
+	.game { width: 93%;}
+	.content { max-width: none; }
+	.button { background: #000000; }
+	.button:hover { background: #000000; }
+	.button#back { top: 0; }
+}
+
+@media screen and (max-width: 400px) {
+	
+	.nomobile {display: none; }
+	.mobile {display: block; }
+	
+	html, body { 
+		overflow-x: hidden; 
+		height: 100%;
+		}
+	
+	.main {  }
+	.content { min-height: 0; }
+	
+	.controlButton {
+		width: 50px;
+		height: 50px;
+		line-height: 30px;
+		font-size: 30px;
+	}
+	/*canvas#myCanvas { margin: 5px auto; }	*/
+
+}
